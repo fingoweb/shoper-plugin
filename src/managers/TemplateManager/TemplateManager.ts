@@ -317,8 +317,16 @@ class TemplateManager {
         const objKey = key as keyof typeof mappedProduct;
 
         const value = mappedProduct[objKey];
+        console.log(key, value);
 
-        if (!value) continue;
+        if (!value) {
+          modifiedTemplate = modifiedTemplate?.replaceAll(
+            new RegExp(key, 'g'),
+            '',
+          );
+
+          continue;
+        }
 
         modifiedTemplate = modifiedTemplate?.replaceAll(
           new RegExp(key, 'g'),

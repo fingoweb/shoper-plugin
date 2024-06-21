@@ -26,6 +26,7 @@ const CONTAINER_SELECTORS_TO_DELETE = [
   '.product__currency',
   '.tm-hornet-container',
   '.tags',
+  '.price .f-row:has(.js__omnibus-price-gross)',
 ];
 const CONTAINER_SELECTORS_TO_CLEAR = ['.price__additional-info'];
 

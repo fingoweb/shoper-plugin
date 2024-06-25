@@ -315,9 +315,7 @@ class TemplateManager {
       let modifiedTemplate = template;
       for (const key in mappedProduct) {
         const objKey = key as keyof typeof mappedProduct;
-
         const value = mappedProduct[objKey];
-        console.log(key, value);
 
         if (!value) {
           modifiedTemplate = modifiedTemplate?.replaceAll(
